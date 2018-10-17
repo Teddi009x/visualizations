@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Bootstrap Visulization Dashboard</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+      .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+      }
+      
+      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+      .row.content {height: 450px}
+      
+      /* Set gray background color and 100% height */
+      .sidenav {
+        padding-top: 20px;
+        background-color: #f1f1f1;
+        height: 100%;
+      }
+      
+      /* Set black background color, white text and some padding */
+      footer {
+        background-color: whitesmoke;
+        color: blue;
+        padding: 15px;
+      }
+      
+      /* On small screens, set height to 'auto' for sidenav and grid */
+      @media screen and (max-width: 767px) {
+        .sidenav {
+          height: auto;
+          padding: 15px;
+        }
+        .row.content {height:auto;} 
+      }
+    </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#my-align">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="my-align">
+        <ul class="lat navbar-nav">
+          <li class="active"><a href="#">Latitude</a></li>
+        </ul>
+        <ul class="navbar-right">
+
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorials
+              <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="visualization_image_1.html">Max Temp</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="visualization_image_2.html">Humidity</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="visualization_image_3.html">Cloudiness</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="visualization_image_4.html">Wind Speed</a></li>
+              <li role="presentation" class="divider"></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="about.html">About Us</a></li>
+            </ul>
+          </div>
+        </ul>
+
+        <ul class="navbar-compar">
+          <li class="active"><a href="comparison.html">Comparison</a></li>
+        </ul>
+
+        <ul class="navbar-data">
+          <li class="active"><a href="Data.html">Data</a></li>
+        </ul>
+
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+  <div class="container-fluid text-center">
+    <div class="row content">
+      <div class="col-sm-8 text-left">
+        <br>
+        <h1>Summary: Latitude vs. X</h1>
+        <br>
+        <img src="./Resources/assets/Images/Fig1.png" alt="Latitude vs. Max Temperature" height="280" width="280" align="left">
+        <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To
+          accomplish this analysis, we first pulled data from the OpenWeatherMapAPI to assemble a dataset on over 500
+          cities.</p>
+        <br>
+        <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude.
+          Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the
+          source data and visualizations created as part of the analysis, as well as explanations and descriptions of
+          any trends and correlations witnessed.</p>
+
+      </div>
+      <div class="col-sm-12 col-md-4 sidenav">
+        <div class="box">
+          <div class="header">
+            <h1 class="title">Visualizations</h1>
+          </div>
+          <div class="content">
+            <div class="row">
+              <div class="column">
+                <div class="col-md-4">
+                  <a href="./visualization_image_1.html"><img src="./Resources/assets/Images/Fig1.png" alt="Latitude vs. Max Temperature"
+                      height="180" width="180"></a>
+                </div>
+                <div class="col-md-4"></div>
+                <a href="./visualization_image_2.html"><img src="./Resources/assets/Images/Fig2.png" alt="Latitude vs. Humidity"
+                    height="180" width="180"></a>
+              </div>
+              <a href="./visualization_image_3.html"><img src="./Resources/assets/Images/Fig3.png" alt="Latitude vs. Cloudiness"
+                  height="180" width="180"></a>
+              <a href="./visualization_image_4.html"><img src="./Resources/assets/Images/Fig4.png" alt="Latitude vs. Wind Speed"
+                  height="180" width="180"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer class="container-fluid text-center">
+    <p>Copyright Coding Bootcamp 2018</p>
+  </footer>
+
+</body>
+
+</html>
